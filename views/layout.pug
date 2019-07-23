@@ -2,6 +2,58 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/bootstrap/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/font-awesome/font-awesome.css')
   body
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top#main-nav
+        .container-fluid
+            a.navbar-brand(href='#')
+                svg#loading-bar(xmlns='http://www.w3.org/2000/svg', width='36', height='22', viewBox='0 0 36 40')
+                    defs
+                        style.
+                            .cls-1 {
+                                fill: #11898a;
+                            }
+                    g#Layer_2(data-name='Layer 2')
+                        g#Layer_1-2(data-name='Layer 1')
+                            path#loading-bar-right.cls-1(d='M39.5,2.9v32c0,3.86,6,3.87,6,0V2.9c0-3.86-6-3.87-6,0Z')
+                            path#loading-bar-middle.cls-1(d='M18.54,2.9v32c0,3.86,6,3.87,6,0V2.9c0-3.86-6-3.87-6,0Z')
+                            path#loading-bar-left.cls-1(d='M0,2.9v32c0,3.86,6,3.87,6,0V2.9C6-1,0-1,0,2.9Z')
+
+
+            .d-md-flex.justify-content-end
+                ul.navbar-nav.float-right
+                    li
+                    a(href="#")
+                            i.fab.fa-facebook
+
+                    li
+                    a(href="#")
+                            i.fab.fa-instagram
+
+                    li
+                    a(href="#")
+                            i.fab.fa-twitter
+
+
+
+
     block content
+    block footer
+        footer.text-muted
+            .container
+                p.float-right
+                    a(href='#') Back to top
+                |
+                p Album example is &copy; Bootstrap, but please download and customize it for yourself!
+                |
+                p
+                    | New to Bootstrap?
+                    a(href='../../') Visit the homepage
+                    |  or read our
+                    a(href='../../getting-started/') getting started guide
+                    | .
+    block script
+        script(type='text/javascript', src='/bootstrap_js/bootstrap.js')

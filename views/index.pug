@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  section#cover
+    .container
+      .row
+          .col-md-8.mx-auto
+              div#center
+                img.img-fluid.mx-auto(src='/images/logo.svg')
+                h1.text-muted.text-center GARDENERS
+
+  section#bitrain
+    .container
+        .row
