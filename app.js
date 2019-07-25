@@ -15,10 +15,13 @@ app.set('view engine', 'pug');
 
 // CSS Files
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css/')));
-app.use('/font-awesome', express.static(path.join(__dirname, 'node_modules/font-awesome/css/')));
+app.use('/owl-carousel', express.static(path.join(__dirname,'node_modules/owl.carousel/dist/assets/')));
 
 // JS Files
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/')));
 app.use('/bootstrap_js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js/')));
+app.use('/owl-carousel_js', express.static(path.join(__dirname, 'node_modules/owl.carousel/dist/')));
+app.use('/preloader_js', express.static(path.join(__dirname, 'public/js/preloader/')));
 
 // Images Files
 app.use('/images', express.static(path.join(__dirname, 'public/images/')));
